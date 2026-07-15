@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/fontawesome-free-6.6.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/css/normalize.min.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./public/css/responsive.css">
     <title>Cake Shop</title>
     <!-- bootstrap link css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -15,50 +20,197 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
-    <!-- navbar -->
-    <div class="container-fluid p-0">
-        <nav class="navbar navbar-expand-lg navbar-ligt bg-info">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Logo</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Products</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Register</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Cart</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Total Price</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+<body> 
+
+    <header class="header p-3 position-sticky top-0">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-4 d-flex justify-content-start">
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="d-inline-block header__wapper-icon-search">
+                            <i class="fa-solid fa-magnifying-glass fs-2 cursor-pointer" role="button"
+                                data-bs-toggle="modal" data-bs-target="#staticBackdrop"></i>
+                        </span>
+                        <span class="fs-3 text-white d-none d-sm-block">Tìm kiếm</span>
+                    </div>
+                </div>
+                <div class="col-4 d-flex justify-content-center">
+                    <div class="header__logo">
+                        <a href="#" class="d-block w-100 text-center">
+                            <img src="./public/images/logo.png" alt="" class="w-100 h-100">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-4 d-flex justify-content-end gap-4">
+                    <div class="position-relative">
+                        <i class="fa-solid fa-bars text-white fs-2 cursor-pointer dropdown-toggle "
+                            data-bs-toggle="dropdown" aria-expanded="false" role="button"></i>
+                        <!-- <div class="position-absolute top-100 end-0 bg-white py-4 px-3 list-unstyled rounded-5"
+                            style="width: 25rem; border: 1px solid #9e553b;"> -->
+                        <ul class=" dropdown-menu bg-white py-4 px-3 list-unstyled rounded-5 text-start"
+                            style="width: 25rem; border: 1px solid #9e553b;">
+                            <li class="p-2" style="border-bottom: 1px solid #9e553b;">
+                                <a href="#" class="fs-4 text-decoration-none text-black d-block">
+                                    <img src="./public/images/home.png" alt="" style="width: 3rem;">
+                                    Trang Chủ</a>
+                            </li>
+                            <li class="p-2" style="border-bottom: 1px solid #9e553b;">
+                                <a href="#" class="fs-4 text-decoration-none text-black d-block">
+                                    <img src="./public/images/cauchuyen.png" alt="" style="width: 3rem;">
+                                    Câu Chuyện Thương Hiệu</a>
+                            </li>
+                            <li class="p-2">
+                                <a href="#" class="fs-4 text-decoration-none text-black d-block">
+                                    <img src="./public/images/lienhe.png" alt="" style="width: 3rem;">
+                                    Liên Hệ</a>
+                            </li>
+                        </ul>
+                        <!-- </div> -->
+                    </div>
+                    <div class="position-relative">
+                        <a href="#">
+                            <i class="fa-solid fa-cart-shopping text-white fs-2"></i>
+                            <span class="position-absolute fs-3 text-white" style="top: -80%; right: -80%;">(0)</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </nav>
+        </div>
+    </header>
+
+    <main class="main__home pb-5">
+        <div class="main__home-banner">
+            <img src="./public/images/banner.png" alt="" class="w-100">
+        </div>
+        <div class="main__home-category text-center">
+            <h2 class="text-uppercase text-center d-inline-block main-heading">Danh Mục</h2>
+            <div class="container " style="min-width: 90%; max-width: 90%;">
+                <div class="main__home-category-list">
+                    <div class="row gy-5">
+                        <div class="col-sm-6 position-relative main_home-category-item overflow-hidden">
+                            <img src="./public/images/cate-banhkem.png" alt="" style="width: 25rem;">
+                            <span class="bg-white fw-bolder position-absolute main__home-category-item-heading">Bánh
+                                Kem</span>
+                        </div>
+                        <div class="col-sm-6 position-relative main_home-category-item overflow-hidden">
+                            <img src="./public/images/cake-capdong.png" alt="" style="width: 25rem;">
+                            <span class="bg-white fw-bolder position-absolute main__home-category-item-heading">Bánh
+                                Cấp Đông</span>
+                        </div>
+                        <div class="col-sm-6 position-relative main_home-category-item overflow-hidden">
+                            <img src="./public/images/cake-cookie.png" alt="" style="width: 25rem;">
+                            <span class="bg-white fw-bolder position-absolute main__home-category-item-heading">Bánh
+                                Cookies</span>
+                        </div>
+                        <div class="col-sm-6 position-relative main_home-category-item overflow-hidden">
+                            <img src="./public/images/cake-banhngot.png" alt="" style="width: 25rem;">
+                            <span class="bg-white fw-bolder position-absolute main__home-category-item-heading">Bánh
+                                Mì - Bánh Ngọt</span>
+                        </div>
+                        <div class="col-sm-6 position-relative main_home-category-item overflow-hidden">
+                            <img src="./public/images/cake-banhlanh.png" alt="" style="width: 25rem;">
+                            <span class="bg-white fw-bolder position-absolute main__home-category-item-heading">Bánh
+                                Lạnh</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog d-flex align-items-center" style="height: 500px;">
+            <div class="modal-content bg-transparent border-0">
+                <button type="button" class="bg-transparent border-0 text-end mb-4" data-bs-dismiss="modal">
+                    <i class="fa-solid fa-circle-xmark text-white fs-1"></i>
+                </button>
+                <div>
+                    <input type="text" placeholder="Search..." class="fs-4 p-3 w-100 rounded-5">
+                </div>
+            </div>
+        </div>
     </div>
+
+    <footer class="footer ">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h3 class="footer__heading">Contact</h3>
+                    <h5 class="fs-3 fw-bolder d-flex align-items-center">
+                        <div style="width: 30px;">
+                            <img src="./public/images/mini-logo.png" alt="" class="w-100 h-100">
+                        </div>
+                        Restaurant
+                    </h5>
+                    <p>
+                        <i class="fa-solid fa-phone fs-4"></i>
+                        0707155999
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-location-dot fs-4"></i>
+                        Số 2, đường số 18, KDC Vạn Phúc, P. Hiệp Bình Phước, TP. Thủ Đức, TP. HCM
+                    </p>
+                    <h5 class="fs-3 fw-bolder d-flex align-items-center">
+                        <div style="width: 30px;">
+                            <img src="./public/images/mini-logo.png" alt="" class="w-100 h-100">
+                        </div>
+                        Bakery
+                    </h5>
+                    <p>
+                        <i class="fa-solid fa-phone fs-4"></i>
+                        0707133999
+                    </p>
+                    <p>
+                        <span class="d-block mb-4">
+                            <i class="fa-solid fa-location-dot fs-4"></i>
+                            127 Đồng Đen, P.12, Quận Tân Bình, TP. HCM
+                        </span>
+                        <span class="d-block mb-4">
+                            <i class="fa-solid fa-location-dot fs-4"></i>
+                            86 Vĩnh Viễn, P.2, Quận 10. TP. HCM
+                        </span>
+                        <span class="d-block">
+                            <i class="fa-solid fa-location-dot fs-4"></i>
+                            168 Khánh Hội, P.6, Quận 4
+                        </span>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="footer__heading">GET SUGARY LETTERS</h3>
+                    <h5 class="fs-3 fw-bolder">Policy</h5>
+                    <p><a href="#" class="text-decoration-none" style="color: #9d573c;">1. CHÍNH SÁCH ĐỔI TRẢ SẢN
+                            PHẨM</a></p>
+                    <p><a href="#" class="text-decoration-none" style="color: #9d573c;">2. CHÍNH SÁCH BẢO MẬ</a></p>
+                    <p><a href="#" class="text-decoration-none" style="color: #9d573c;">3. CHÍNH SÁCH VẬN CHUYỂN</a></p>
+                    <p><a href="#" class="text-decoration-none" style="color: #9d573c;">4. CHÍNH SÁCH KIỂM HÀNG</a></p>
+                    <p><a href="#" class="text-decoration-none" style="color: #9d573c;">5. CHÍNH SÁCH THANH TOÁN</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="footer__heading">OUR PRODUCT</h3>
+                    <h5 class="fs-3 fw-bolder">Bakery Store</h5>
+                    <p>Công ty TNHH SUGAR TOWN GPKD số 0316713744 cấp ngày 09/02/2021 tại Sở Kế hoạch và Đầu tư Tp. Hồ
+                        Chí Minh</p>
+                    <p>Email:ciao@sugartown.vn Website:https://www.sugartown.vn/</p>
+                </div>
+            </div>
+        </div>
+        <div class="py-5" style="background-color: #9d573c;">
+            <div class="container">
+                <h4 class="text-center fs-4 m-0 text-white">2021 SUGAR TOWN All right reserved</h4>
+            </div>
+        </div>
+    </footer>
 
     <!-- bootstrap js link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous">
     </script>
+    <script src="./public/js/bootstrap.bundle.min.js"></script>
+    <script src="./public/fontawesome-free-6.6.0-web/js/all.min.js"></script>
+    <script src="./public/js/app.js"></script>
 
 </body>
 </html>
